@@ -30,7 +30,7 @@ const transporter = nodemailer.createTransport({
 const arr = [0, 20000, 604800000, 18144000000, 217728000000];
 const sendemail = async() => {
   try {
-     node_cron.schedule("* * * * * *",async () => {
+     node_cron.schedule("30 * * * * *",async () => {
       let data = await User.find();
       for (var i = 0; i < data.length; i++) {
         const sender_email = data[i].email;
